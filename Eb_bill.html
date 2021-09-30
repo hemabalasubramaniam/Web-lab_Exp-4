@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>EB Bill</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+  <body style=" background-color:rgb(250, 250, 224);font-family: serif;">
+      
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-danger p-3">
+        <a class="navbar-brand pr-3 pb-0 text-white" href="#"><h3>Calculator</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 21px;">
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item active" >
+              <a class="nav-link pr-3" href="index.html"> <i class="fas fa-graduation-cap"><span>&nbsp;CGPA Calculator <span class="sr-only">(current)</span></span></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-white pr-3" href="Eb_bill.html"><i class="fas fa-receipt"><span>&nbsp;EB-Bill Calculator </span></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white pr-3" href="Tax_calculator.html"><i class="fas fa-dollar-sign"><span>&nbsp;Income-Tax Calculator</span></i></a>
+              </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right pt-2 text-white">
+            <i class="fas fa-user"><span class="mr-3">&nbsp; sign-up</span></i><br>
+            <i class="fas fa-sign-in-alt"><span class="mr-3">&nbsp; Login</span></i>
+          </ul>
+          
+        </div>
+      </nav><br><br>
+    <div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center"><b>TNEB Electricity Bill Calculator</b></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="row mt-3">
+                <div class="col mt-3">
+                    <h5><b>Tariff check:-</b></h5>
+                </div>
+                <div class="col">
+                    <p>
+                        <div class="form-group">
+                            <select name="course" id="tariff" class="form-control" required="">
+                                <option value="">--Select the Tariff--</option>
+                                <option value="">Domestic</option>
+                                <option value="">Commercial</option>
+                            </select>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <h5><b>Billing Cycle:-</b></h5>
+                </div>
+                <div class="col">
+                    <p>
+                        <select name="course" id="course2" class="form-control" required="">
+                            <option value="">Bi Monthly</option> 
+                            <option value="">Monthly</option>
+                        </select>    
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <h5><b>Contracted load(Not required for Domestic Tariff):-</b></h5>
+                </div>
+                <div class="col">
+                    <p>
+                        <input type="number"class=" subject-input form-control" id="credit6" placeholder=" ">
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <h5><b>Consumed Units:-</b></h5>
+                </div>
+                <div class="col">
+                    <input type="number" id="get2" class=" subject-input form-control" id="credit6" placeholder=" ">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <h5><b>KVAH(Not required for Domestic Tariff):-</b></h5>
+                </div>
+                <div class="col">
+                    <input type="number"class=" subject-input form-control" id="credit6" placeholder=" "> 
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col" style="text-align: center;">
+                    <button type="button" class="btn btn-danger" onclick="calculate()">Calculate..</button>
+                </div>
+            </div>
+        </div>    
+        <div class="col-lg-2"></div>
+    </div>
+    </div>
+    <p id="bill" class="text-center mt-3"></p>
+    <script>
+     
+        function calculate()
+        {   
+          var units = parseInt(document.getElementById("get2").value);
+          var a=0;
+          var s=document.getElementById("tariff");
+          var t=s.options[s.selectedIndex];
+          if(t.text=="Commercial"){
+          
+            if (units <= 100)
+            {
+               a= units * 10;
+            }
+            else if (units <= 200)
+            {
+                a= (100 * 10)
+                    + (units - 100)
+                          * 15;
+            }
+            else if (units <= 300)
+            {
+                a= (100 * 10)
+                    + (100 * 15)
+                    + (units - 200)
+                          * 20;
+            }
+            else if (units > 300)
+            {
+                a= (100 * 10)
+                    + (100 * 15)
+                    + (100 * 20)
+                    + (units - 300)
+                          * 25;
+            }
+            document.getElementById("bill").innerHTML="<h5>Electricity Bill for your commercial consumption is :" +a+"</h5>";
+        }
+        else if (t.text=="Domestic") {
+          if(document.getElementById("course2").selectedIndex!=0)
+          {
+          alert("Domestic calculations happens bi-monthly");
+          document.getElementById("course2").selectedIndex=0;
+          }
+         
+          if (units <= 100)
+            {
+               a= units * 0+0;
+            }
+            else if (units <= 200)
+            {
+                a= (100 * 0)
+                    + ((units - 100)* 1.5)+20;
+            }
+            else if (units <= 500)
+            {
+                a= (100 * 0)+ (100 * 2.0)+ ((units - 200)* 3.00)+30;
+            }
+            else if (units > 500)
+            {
+                a= (100 * 0)+ (100 * 3.50)+ (300 * 4.60)+ ((units - 500)* 6.60)+50;
+            }
+            document.getElementById("bill").innerHTML="<h5>Electricity Bill for your domestic consumption is :" +a+ "</h5>";
+        }
+        else
+        {
+          document.getElementById("bill").innerHTML="<h5>Please Enter Valid Details!!</h5>";
+        }
+      }
+    </script> 
+    <div class="container">
+        <footer>
+            <h6 class="text-center fixed-bottom text-danger ">CopyRight @ 2021.Tamilnadu Generation and Distribution Corporation Limitted</h6>
+            </footer>
+    </div> 
+     
+</body>
+</html>

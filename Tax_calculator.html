@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Tax Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+  <body style="background-color: rgb(182, 252, 229);">
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-danger p-3">
+        <a class="navbar-brand pr-3 pb-0 text-white" href="#"><h3>Calculator</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 21px;">
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item active" >
+              <a class="nav-link pr-3" href="index.html"> <i class="fas fa-graduation-cap"><span>&nbsp;CGPA Calculator <span class="sr-only">(current)</span></span></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-white pr-3" href="Eb_bill.html"><i class="fas fa-receipt"><span>&nbsp;EB-Bill Calculator </span></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white pr-3" href="Tax_calculator.html"><i class="fas fa-dollar-sign"><span>&nbsp;Income-Tax Calculator</span></i></a>
+              </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right pt-2 text-white">
+            <i class="fas fa-user"><span class="mr-3">&nbsp; sign-up</span></i><br>
+            <i class="fas fa-sign-in-alt"><span class="mr-3">&nbsp; Login</span></i>
+          </ul>
+          
+        </div>
+      </nav><br><br>
+    <div class="container-fluid mt-5" style="font-family: serif;">
+        <h1 class="text-center">Tax Calculator</h1>
+        <div class="row mt-5 ml-5">
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col">
+                        <h3><b>Annual Salary:-</b></h3>
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control" id="income">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <h3><b>OtherIncome sources:-</b></h3>
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control" id="other" >
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col text-center">
+                        <button type="button" class="btn btn-info" onclick="taxcalc()">Calculate..</button>
+                    </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <h5><b>House Rent Allowance(HRA):-</b></h5>
+                </div>
+                <div class="col">
+                    <h5 id="hra"><b>-</b></h5>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <h5><b>Dearness allowance(DA):-</b></h5>
+                </div>
+                <div class="col">
+                    <h5 id="da"><b>-</b></h5>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <h5><b>Claim deduction:-</b></h5>
+                </div>
+                <div class="col">
+                    <h5 id="claim"><b>-</b></h5>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <h5><b>Income after all the deductions:-</b></h5>
+                </div>
+                <div class="col">
+                    <h5 id="tax_income"><b>-</b></h5>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <h5><b>Tax for Your Income is:-</b></h5>
+                </div>
+                <div class="col">
+                    <h5 id="tax1"><b>-</b></h5>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-4" style="padding-right: 20px;">
+                <img src="tax.jpg"/>
+            </div>
+            <div class="col-lg-1"></div>
+            </div>
+        </div>
+
+                
+    <script>
+        function taxcalc()
+        {
+            var salary=document.getElementById("income").value;
+            var other=document.getElementById("other").value;
+            var hra=(0.1*salary).toFixed(2);
+            document.getElementById("hra").innerHTML="<b>Rs." +hra+ "</b>";
+            var da=(0.05*salary).toFixed(2);
+            document.getElementById("da").innerHTML="<b>Rs. " +da+ "</b>";
+            var gross_sal=parseInt(salary)-parseInt(hra+da);
+            var taxable_income=parseInt(gross_sal)+parseInt(other);
+            var loan=(0.04*salary).toFixed(2);
+            document.getElementById("claim").innerHTML="<b>Rs. " +loan+ "</b>";
+            var net_taxable=(parseInt(taxable_income)-parseInt(loan)).toFixed(2);
+            document.getElementById("tax_income").innerHTML="<b>Rs. " +net_taxable+ "</b>";
+
+            if(net_taxable <=250000)
+            {
+                document.getElementById("tax1").innerHTML="<b>No tax for Income less than 2,50,000</b>";
+            }
+            else if(net_taxable > 250000 && net_taxable <= 500000)
+            {
+                var tax1=(0.05*net_taxable).toFixed(2);
+                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+            }
+            else if(net_taxable > 500000 && net_taxable <= 750000)
+            {
+                var tax1=(0.10*net_taxable).toFixed(2);
+                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+            }
+            else if(net_taxable > 750000 && net_taxable <= 1000000)
+            {
+                var tax1=(0.15*net_taxable).toFixed(2);
+                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+            }
+            else if(net_taxable > 1000000 && net_taxable <= 1250000)
+            {
+                var tax1=(0.20*net_taxable).toFixed(2);
+                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+            }
+            else if(net_taxable > 1250000 && net_taxable <= 1500000)
+            {
+                var tax1=(0.25*net_taxable).toFixed(2);
+                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+            }
+            else
+            {
+                var tax1=(0.30*net_taxable).toFixed(2);
+                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+            }
+        }
+
+    </script>
+</body>
+</html>
