@@ -163,10 +163,10 @@
             </div>
             <div class="row mt-4">
               <div class="col">
-                <input type="number" class="subject-input form-control" id="mark6" placeholder="Enter Marks of Subject 6" required min="0" max="100"> 
+                <input type="number" class="subject-input form-control" id="mark6" placeholder="Enter Marks of Subject 6" min="0" max="100"> 
               </div>
               <div class="col">
-                <input type="number"class=" subject-input form-control" id="credit6" placeholder="Enter Subject6 credit" required min="0" max="5">
+                <input type="number"class=" subject-input form-control" id="credit6" placeholder="Enter Subject6 credit" min="0" max="5">
               </div>
             </div>
             <div class="row mt-5">
@@ -555,11 +555,23 @@
               var sub6=f1*0;
             }
 
-            if(sub1==0 || sub2==0 || sub3==0 || sub4==0 || sub5==0 || sub6==0) 
+            if(sub1==0 || sub2==0 || sub3==0 || sub4==0 || sub5==0) 
             {
               document.getElementById("result").innerHTML="Grade Points Average(GPA) : --";
             }
-            else{
+            else if(f1==0)
+            {
+                document.getElementById("cg6").innerHTML="NA";
+            
+                var sub_credit=sub1+sub2+sub3+sub4+sub5;
+                var totalcredit=parseInt(a1)+parseInt(b1)+parseInt(c1)+parseInt(d1)+parseInt(e1);
+                var result=parseFloat(sub_credit/totalcredit);
+                var cgpa=result.toFixed(2);
+                document.getElementById("result").innerHTML="Grade Points Average(GPA) : "+cgpa+ "*";
+            
+            }
+            else
+            {
               var sub_credit=sub1+sub2+sub3+sub4+sub5+sub6;
               var totalcredit=parseInt(a1)+parseInt(b1)+parseInt(c1)+parseInt(d1)+parseInt(e1)+parseInt(f1);
               var result=parseFloat(sub_credit/totalcredit);
