@@ -180,7 +180,7 @@
                     + (units - 300)
                           * 25;
             }
-            document.getElementById("bill").innerHTML="<h5>Electricity Bill for your commercial consumption is :" +a+"</h5>";
+            document.getElementById("bill").innerHTML="<h5>Electricity Bill for your commercial consumption is : Rs." +a+"</h5>";
         }
         else if (t.text=="Domestic") {
           if(document.getElementById("course2").selectedIndex!=0)
@@ -206,7 +206,7 @@
             {
                 a= (100 * 0)+ (100 * 3.50)+ (300 * 4.60)+ ((units - 500)* 6.60)+50;
             }
-            document.getElementById("bill").innerHTML="<h5>Electricity Bill for your domestic consumption is :" +a+ "</h5>";
+            document.getElementById("bill").innerHTML="<h5>Electricity Bill for your domestic consumption is : Rs." +a+ "</h5>";
         }
         else
         {
