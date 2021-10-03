@@ -48,125 +48,120 @@
           <h1 class="text-center  py-2">
             CGPA Calculator
           </h1>
-      
-   <!-- <form style="font-size: 20px;">
-      <div class="row mt-4">
-        <div class="col-lg-3"></div>
-      <div class="col-lg-6">
-      <div class="row mt-2">
-        <div class="col">
-          <h6 class="text-right">Enter Your Name:</h6>
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" >
-        </div>
-        </div>
-        <div class="row mt-2">
-        <div class="col">
-          <h6 class="text-right">Enter Your Register No:</h6>
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" >
-        </div>
-        </div>
-        <div class="row mt-2">
-        <div class="col">
-          <h6 class="text-right">Enter Your Department:</h6>
-        </div>
-        <div class="col">
-          <select name="dept" id="dept" class="form-control" required="">
-            <option value="">Computer science and Engineering</option>
-            <option value="">Information Technology</option> 
-            <option value="">Civil Engineering</option>
-            <option value="">Automobile Engineering</option>
-            <option value=""> chemical Engineering</option>
-            <option value="">Mechanical Engineering</option>
-            <option value="">Food Technology</option>
-        </select> 
-        </div>
-      </div>
-      <div class="row mt-2">
-        <div class="col">
-          <h6 class="text-right">Enter Your section:</h6>
-        </div>
-        <div class="col">
-          <select name="sec" id="sec" class="form-control" required="">
-            <option value="">A</option> 
-            <option value="">B</option>
-            <option value="">C</option>
-            <option value="">D</option>
-        </select> 
-        </div>
-      </div>
-      <div class="row mt-2">
-        <div class="col">
-          <h6 class="text-right">Enter Your College Name:</h6>
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" >
-        </div>
-        </div>
-      <div class="col-lg-3"></div>
-      </div>
-      </div>
-    </form>
-    </div>
-    <hr>-->
 
-    <div class="container-fluid">
-    <div class="row mt-4" >
-      <div class="col-md-5">
-        <img src="calci.jpg" height="90%"/>
+    <div class="row mt-3" >
+      <div class="col-md-5 mt-3">
+        <img src="calci.jpg" width="110%"/>
       </div>
       <div class=" col-xs-15 col-md-7 align-center">
         <h4 class="pr-4 pl-2 text-center">Enter your Marks and Credits here..</h4>
         <form class="pl-5 mt-4" onsubmit="return false">
-          <div class="row mt-4">
+          <div class="row">
             <div class="col">
-              <input type="number"class=" subject-input form-control" id="mark1" placeholder="Enter Marks of Subject 1" required min="0" max="100">
+                    <div class="form-group">
+                        <select name="course" id="grade1" class="form-control" required="">
+                            <option value="">--Select your grade--</option>
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">RA</option>
+                        </select>
+                    </div>
             </div>
             <div class="col">
-              <input type="number"class=" subject-input form-control" id="credit1" placeholder="Enter Subject1 credit" required min="0" max="5">
+              <input type="number"class=" subject-input form-control" id="credit1" placeholder="Enter Subject1 credit" required min="0" max="10">
             </div>
           </div>
           <div class="row mt-4">
-            <div class="col">
-              <input type="number" class="subject-input form-control" id="mark2" placeholder="Enter Marks of Subject 2" required="" min="0" max="100">
+              <div class="col">
+                <div class="form-group">
+                    <select name="course" id="grade2" class="form-control" required="">
+                        <option value="">--Select your grade--</option>
+                        <option value="">O</option>
+                        <option value="">A+</option>
+                        <option value="">A</option>
+                        <option value="">B+</option>
+                        <option value="">B</option>
+                        <option value="">RA</option>
+                    </select>
+                </div>
             </div>
             <div class="col">
-              <input type="number"class=" subject-input form-control" id="credit2" placeholder="Enter Subject2 credit" required min="0" max="5">  
+              <input type="number"class=" subject-input form-control" id="credit2" placeholder="Enter Subject2 credit" required min="0" max="10">  
             </div>
           </div>
             <div class="row mt-4">
               <div class="col">
-                <input type="number" class="subject-input form-control" id="mark3" placeholder="Enter Marks of Subject 3" required="" min="0" max="100">
+                    <div class="form-group">
+                        <select name="course" id="grade3" class="form-control" required="">
+                            <option value="">--Select your grade--</option>
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">RA</option>
+                        </select>
+                    </div>
               </div>
               <div class="col">
-                <input type="number"class=" subject-input form-control" id="credit3" placeholder="Enter Subject3 credit" required min="0" max="5"> 
-              </div>
-            </div>
-            <div class="row mt-4">
-              <div class="col">
-                <input type="number" class="subject-input form-control" id="mark4" placeholder="Enter Marks of Subject 4" required="" min="0" max="100">
-              </div>
-              <div class="col">
-                <input type="number"class=" subject-input form-control" id="credit4" placeholder="Enter Subject4 credit" required min="0" max="5"> 
-              </div>
-            </div>
-            <div class="row mt-4">
-              <div class="col">
-                <input type="number" class="subject-input form-control" id="mark5" placeholder="Enter Marks of Subject 5" required="" min="0" max="100">
-              </div>
-              <div class="col">
-                <input type="number"class=" subject-input form-control" id="credit5" placeholder="Enter Subject5 credit" required min="0" max="5"> 
+                <input type="number"class=" subject-input form-control" id="credit3" placeholder="Enter Subject3 credit" required min="0" max="10"> 
               </div>
             </div>
             <div class="row mt-4">
               <div class="col">
-                <input type="number" class="subject-input form-control" id="mark6" placeholder="Enter Marks of Subject 6" min="0" max="100"> 
+                    <div class="form-group">
+                        <select name="course" id="grade4" class="form-control" required="">
+                            <option value="">--Select your grade--</option>
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">RA</option>
+                        </select>
+                    </div>
               </div>
               <div class="col">
-                <input type="number"class=" subject-input form-control" id="credit6" placeholder="Enter Subject6 credit" min="0" max="5">
+                <input type="number"class=" subject-input form-control" id="credit4" placeholder="Enter Subject4 credit" required min="0" max="10"> 
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                    <div class="form-group">
+                        <select name="course" id="grade5" class="form-control" required="">
+                            <option value="">--Select your grade--</option>
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">RA</option>
+                        </select>
+                    </div>
+              </div>
+              <div class="col">
+                <input type="number"class=" subject-input form-control" id="credit5" placeholder="Enter Subject5 credit" required min="0" max="10"> 
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                    <div class="form-group">
+                        <select name="course" id="grade6" class="form-control">
+                            <option value="">--Select your grade--</option>
+                            <option value="">O</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">RA</option>
+                        </select>
+                    </div>
+              </div>
+              <div class="col">
+                <input type="number"class=" subject-input form-control" id="credit6" placeholder="Enter Subject6 credit" min="0" max="10">
               </div>
             </div>
             <div class="row mt-5">
@@ -176,13 +171,93 @@
               </div>
             </div>
         </form>
-        </div>  
+        <div class="row">
+            <div class="col mt-5 text-center">
+                <h5 id="result"></h5>
+            </div>
+        </div>
+       </div>
+       </div>
       
-    </div> 
     </div>
     <hr>
+    <div class="container">
+        <h3 class="text-center">Cumulative Grade Points Average</h3>
+        <form action="">
+            <div class="row mt-5">
+                <div class="col-lg-5"></div>
+                <div class="col-lg-2 text-center">
+            <div class="form-group">
+                <select name="course1" id="cgpa1" class="form-control form-control-sm" onchange="cgpa()" required>
+                    <option value="">Choose the semester to get your CGPA</option>
+                    <option value="1">Untill 1st sem</option>
+                    <option value="2">Untill 2nd sem</option>
+                    <option value="3">Untill 3rd sem</option>
+                    <option value="4">Untill 4th sem</option>
+                    <option value="5">Untill 5th sem</option>
+                    <option value="6">Untill 6th sem</option>
+                    <option value="7">Untill 7th sem</option>
+                    <option value="8">Untill 8th sem</option>
+                </select>
+            </div>
+            </div>
+            <div class="col-lg-5"></div>
+            </div>
+            <div class="row mt-5">
+                <div class="col"></div>
+                <div class="col">
+                    <input type=" " id="s1" style="display: none;"  placeholder="Enter 1st Sem GPA">
+                </div>
+                <div class="col">
+                    <input type=" " id="s2" style="display: none;" placeholder="Enter 2nd Sem GPA">
+                </div>
+                <div class="col">
+                    <input type=" " id="s3" style="display: none;" placeholder="Enter 3rd Sem GPA">
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="row mt-4">
+                <div class="col"></div>
+                <div class="col">
+                    <input type=" " id="s4" style="display: none;" placeholder="Enter 4th Sem GPA">
+                </div>
+                <div class="col">
+                    <input type=" " id="s5" style="display: none;"  placeholder="Enter 5th Sem GPA">
+                </div>
+                <div class="col">
+                    <input type=" " id="s6" style="display: none;"  placeholder="Enter 6th Sem GPA">
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="row mt-4">
+                <div class="col"></div>
+                <div class="col">
+                    <input type=" " id="s7" style="display: none;"  placeholder="Enter 7th Sem GPA">
+                </div>
+                <div class="col">
+                    <input type=" " id="s8" style="display: none;"  placeholder="Enter 8th Sem GPA">
+                </div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </form>
+        <div class="row mt-4">
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2">
+                <button type="button" onclick="cgpacalc()" class="btn btn-warning text-center">CGPA....</button>
+            </div>
+            <div class="col-lg-5"></div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-7">
+                <h5 class="text-center" id="final">.</h5>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
 
-    <div class="container mt-5" id="table">
+   <!-- <div class="container mt-5" id="table">
       <h2 class="text-center">Report Card</h2>
   <table class="table mt-3">
       <thead style="background-color: rgb(0, 55, 205); color: white;">
@@ -234,335 +309,192 @@
     </table><br>
     <div class="row">
       <div class="col">
-        <h5 class="text-center" id="result">....</h5>
+        <h5 class="text-center">....</h5>
       </div>
       
     </div>
-  </div>
+  </div>-->
     <script>
         function myfunction()
         {
-            var a=document.getElementById("mark1").value;
-            document.getElementById("m1").innerHTML=+a;
-            if(a>=91 && a<=100)
-            {
-              document.getElementById("cg1").innerHTML="O";
-            }
-            else if(a>=81 && a<=90)
-            {
-              document.getElementById("cg1").innerHTML="A+";
-            }
-            else if(a>=71 && a<=80)
-            {
-              document.getElementById("cg1").innerHTML="A";
-            }
-            else if(a>=61 && a<=70)
-            {
-              document.getElementById("cg1").innerHTML="B+";
-            }
-            else if(a>=51 && a<=60)
-            {
-              document.getElementById("cg1").innerHTML="B";
-            }
-            else{
-              document.getElementById("cg1").innerHTML="RA";
-            }
-
-            var b=document.getElementById("mark2").value;
-            document.getElementById("m2").innerHTML=+b;
-            if(b>=91 && b<=100)
-            {
-              document.getElementById("cg2").innerHTML="O";
-            }
-            else if(b>=81 && b<=90)
-            {
-              document.getElementById("cg2").innerHTML="A+";
-            }
-            else if(b>=71 && b<=80)
-            {
-              document.getElementById("cg2").innerHTML="A";
-            }
-            else if(b>=61 && b<=70)
-            {
-              document.getElementById("cg2").innerHTML="B+";
-            }
-            else if(b>=51 && b<=60)
-            {
-              document.getElementById("cg2").innerHTML="B";
-            }
-            else{
-              document.getElementById("cg2").innerHTML="RA";
-            }
-
-            var c=document.getElementById("mark3").value;
-            document.getElementById("m3").innerHTML=+c;
-            if(c>=91 && c<=100)
-            {
-              document.getElementById("cg3").innerHTML="O";
-            }
-            else if(c>=81 && c<=90)
-            {
-              document.getElementById("cg3").innerHTML="A+";
-            }
-            else if(c>=71 && c<=80)
-            {
-              document.getElementById("cg3").innerHTML="A";
-            }
-            else if(c>=61 && c<=70)
-            {
-              document.getElementById("cg3").innerHTML="B+";
-            }
-            else if(c>=51 && c<=60)
-            {
-              document.getElementById("cg3").innerHTML="B";
-            }
-            else{
-              document.getElementById("cg3").innerHTML="RA";
-            }
-
-            var d=document.getElementById("mark4").value;
-            document.getElementById("m4").innerHTML=+d;
-            if(d>=91 && d<=100)
-            {
-              document.getElementById("cg4").innerHTML="O";
-            }
-            else if(d>=81 && d<=90)
-            {
-              document.getElementById("cg4").innerHTML="A+";
-            }
-            else if(d>=71 && d<=80)
-            {
-              document.getElementById("cg4").innerHTML="A";
-            }
-            else if(d>=61 && d<=70)
-            {
-              document.getElementById("cg4").innerHTML="B+";
-            }
-            else if(d>=51 && d<=60)
-            {
-              document.getElementById("cg4").innerHTML="B";
-            }
-            else{
-              document.getElementById("cg4").innerHTML="RA";
-            }
-
-            var e=document.getElementById("mark5").value;
-            document.getElementById("m5").innerHTML=+e;
-            if(e>=91 && e<=100)
-            {
-              document.getElementById("cg5").innerHTML="O";
-            }
-            else if(e>=81 && e<=90)
-            {
-              document.getElementById("cg5").innerHTML="A+";
-            }
-            else if(e>=71 && e<=80)
-            {
-              document.getElementById("cg5").innerHTML="A";
-            }
-            else if(e>=61 && e<=70)
-            {
-              document.getElementById("cg5").innerHTML="B+";
-            }
-            else if(e>=51 && e<=60)
-            {
-              document.getElementById("cg5").innerHTML="B";
-            }
-            else{
-              document.getElementById("cg5").innerHTML="RA";
-            }
-
-            var f=document.getElementById("mark6").value;
-            document.getElementById("m6").innerHTML=+f;
-            if(f>=91 && f<=100)
-            {
-              document.getElementById("cg6").innerHTML="O";
-            }
-            else if(f>=81 && f<=90)
-            {
-              document.getElementById("cg6").innerHTML="A+";
-            }
-            else if(f>=71 && f<=80)
-            {
-              document.getElementById("cg6").innerHTML="A";
-            }
-            else if(f>=61 && f<=70)
-            {
-              document.getElementById("cg6").innerHTML="B+";
-            }
-            else if(f>=51 && f<=60)
-            {
-              document.getElementById("cg6").innerHTML="B";
-            }
-            else{
-              document.getElementById("cg6").innerHTML="RA";
-            }
 
             var a1=document.getElementById("credit1").value;
-            document.getElementById("c1").innerHTML=+a1;
             var b1=document.getElementById("credit2").value;
-            document.getElementById("c2").innerHTML=+b1;
             var c1=document.getElementById("credit3").value;
-            document.getElementById("c3").innerHTML=+c1;
             var d1=document.getElementById("credit4").value;
-            document.getElementById("c4").innerHTML=+d1;
             var e1=document.getElementById("credit5").value;
-            document.getElementById("c5").innerHTML=+e1;
             var f1=document.getElementById("credit6").value;
-            document.getElementById("c6").innerHTML=+f1;
 
-            if(a>=91 && a<=100)
+            var s1=document.getElementById("grade1");
+            var t=s1.options[s1.selectedIndex];
+            if(t.text=="O")
             {
               var sub1=a1*10;
             }
-            else if(a>=81 && a<=90)
+            else if(t.text=="A+")
             {
               var sub1=a1*9;
             }
-            else if(a>=71 && a<=80)
+            else if(t.text=="A")
             {
               var sub1=a1*8;
             }
-            else if(a>=61 && a<=70)
+            else if(t.text=="B+")
             {
               var sub1=a1*7;
             }
-            else if(a>=51 && a<=60)
+            else if(t.text=="B")
             {
               var sub1=a1*6;
             }
-            else{
+            else
+            {
               var sub1=a1*0;
             }
 
-            if(b>=91 && b<=100)
+            var s2=document.getElementById("grade2");
+            var t2=s2.options[s2.selectedIndex];
+            if(t2.text=="O")
             {
               var sub2=b1*10;
             }
-            else if(b>=81 && b<=90)
+            else if(t2.text=="A+")
             {
               var sub2=b1*9;
             }
-            else if(b>=71 && b<=80)
+            else if(t2.text=="A")
             {
               var sub2=b1*8;
             }
-            else if(b>=61 && b<=70)
+            else if(t2.text=="B+")
             {
               var sub2=b1*7;
             }
-            else if(b>=51 && b<=60)
+            else if(t2.text=="B")
             {
               var sub2=b1*6;
             }
-            else{
+            else
+            {
               var sub2=b1*0;
             }
 
-            if(c>=91 && c<=100)
+            var s3=document.getElementById("grade3");
+            var t3=s3.options[s3.selectedIndex];
+            if(t3.text=="O")
             {
               var sub3=c1*10;
             }
-            else if(c>=81 && c<=90)
+            else if(t3.text=="A+")
             {
               var sub3=c1*9;
             }
-            else if(c>=71 && c<=80)
+            else if(t3.text=="A")
             {
               var sub3=c1*8;
             }
-            else if(c>=61 && c<=70)
+            else if(t3.text=="B+")
             {
               var sub3=c1*7;
             }
-            else if(c>=51 && c<=60)
+            else if(t3.text=="B")
             {
               var sub3=c1*6;
             }
-            else{
+            else
+            {
               var sub3=c1*0;
             }
 
-            if(d>=91 && d<=100)
+            var s4=document.getElementById("grade4");
+            var t4=s4.options[s4.selectedIndex];
+            if(t4.text=="O")
             {
               var sub4=d1*10;
             }
-            else if(d>=81 && d<=90)
+            else if(t4.text=="A+")
             {
               var sub4=d1*9;
             }
-            else if(d>=71 && d<=80)
+            else if(t4.text=="A")
             {
               var sub4=d1*8;
             }
-            else if(d>=61 && d<=70)
+            else if(t4.text=="B+")
             {
               var sub4=d1*7;
             }
-            else if(d>=51 && d<=60)
+            else if(t4.text=="B")
             {
               var sub4=d1*6;
             }
-            else{
+            else
+            {
               var sub4=d1*0;
             }
 
-            if(e>=91 && e<=100)
+            var s5=document.getElementById("grade5");
+            var t5=s5.options[s5.selectedIndex];
+            if(t5.text=="O")
             {
               var sub5=e1*10;
             }
-            else if(e>=81 && e<=90)
+            else if(t5.text=="A+")
             {
               var sub5=e1*9;
             }
-            else if(e>=71 && e<=80)
+            else if(t5.text=="A")
             {
               var sub5=e1*8;
             }
-            else if(e>=61 && e<=70)
+            else if(t5.text=="B+")
             {
               var sub5=e1*7;
             }
-            else if(e>=51 && e<=60)
+            else if(t5.text=="B")
             {
               var sub5=e1*6;
             }
-            else{
+            else
+            {
               var sub5=e1*0;
             }
 
-            if(f>=91 && f<=100)
+            var s6=document.getElementById("grade6");
+            var t6=s6.options[s6.selectedIndex];
+            if(t6.text=="O")
             {
               var sub6=f1*10;
             }
-            else if(f>=81 && f<=90)
+            else if(t6.text=="A+")
             {
               var sub6=f1*9;
             }
-            else if(f>=71 && f<=80)
+            else if(t6.text=="A")
             {
               var sub6=f1*8;
             }
-            else if(f>=61 && f<=70)
+            else if(t6.text=="B+")
             {
               var sub6=f1*7;
             }
-            else if(f>=51 && f<=60)
+            else if(t6.text=="B")
             {
               var sub6=f1*6;
             }
-            else{
+            else
+            {
               var sub6=f1*0;
             }
 
-            if(sub1==0 || sub2==0 || sub3==0 || sub4==0 || sub5==0) 
+
+            if(sub1==0 ||sub2==0 ||sub3==0 ||sub4==0 || sub5==0) 
             {
-              document.getElementById("result").innerHTML="Grade Points Average(GPA) : --";
+              document.getElementById("result").innerHTML="Grade Points Average(GPA) : NA";
             }
-            else if(f1==0)
+            else if(sub6==0 && t6.text!="RA")
             {
-                document.getElementById("cg6").innerHTML="NA";
-            
+                
                 var sub_credit=sub1+sub2+sub3+sub4+sub5;
                 var totalcredit=parseInt(a1)+parseInt(b1)+parseInt(c1)+parseInt(d1)+parseInt(e1);
                 var result=parseFloat(sub_credit/totalcredit);
@@ -570,20 +502,209 @@
                 document.getElementById("result").innerHTML="Grade Points Average(GPA) : "+cgpa+ "*";
             
             }
-             else if(sub6==0)
+            else if(t6.text=="RA")
             {
-                document.getElementById("result").innerHTML="Grade Points Average(GPA) : --";
+                document.getElementById("result").innerHTML="Grade Points Average(GPA) : NA";
             }
             else
             {
+            
               var sub_credit=sub1+sub2+sub3+sub4+sub5+sub6;
               var totalcredit=parseInt(a1)+parseInt(b1)+parseInt(c1)+parseInt(d1)+parseInt(e1)+parseInt(f1);
               var result=parseFloat(sub_credit/totalcredit);
               var cgpa=result.toFixed(2);
               document.getElementById("result").innerHTML="Grade Points Average(GPA) : "+cgpa+ "*";
             }
-            
-        }      
+        }
+
+            function cgpa()
+            {
+
+                var c=document.getElementById("cgpa1").selectedIndex;
+                if(c==1)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="none";
+                    document.getElementById("s3").style.display="none";
+                    document.getElementById("s4").style.display="none";
+                    document.getElementById("s5").style.display="none";
+                    document.getElementById("s6").style.display="none";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                }
+                else if(c==2)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="none";
+                    document.getElementById("s4").style.display="none";
+                    document.getElementById("s5").style.display="none";
+                    document.getElementById("s6").style.display="none";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                }
+                else if(c==3)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="none";
+                    document.getElementById("s5").style.display="none";
+                    document.getElementById("s6").style.display="none";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                   
+                }
+                else if(c==4)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="block";
+                    document.getElementById("s5").style.display="none";
+                    document.getElementById("s6").style.display="none";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                    
+                }
+                else if(c==5)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="block";
+                    document.getElementById("s5").style.display="block";
+                    document.getElementById("s6").style.display="none";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                    
+                }
+                else if(c==6)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="block";
+                    document.getElementById("s5").style.display="block";
+                    document.getElementById("s6").style.display="block";
+                    document.getElementById("s7").style.display="none";
+                    document.getElementById("s8").style.display="none";
+                    
+                }
+                else if(c==7)
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="block";
+                    document.getElementById("s5").style.display="block";
+                    document.getElementById("s6").style.display="block";
+                    document.getElementById("s7").style.display="block";
+                    document.getElementById("s8").style.display="none";
+
+                }
+                else
+                {
+                    document.getElementById("s1").style.display="block";
+                    document.getElementById("s2").style.display="block";
+                    document.getElementById("s3").style.display="block";
+                    document.getElementById("s4").style.display="block";
+                    document.getElementById("s5").style.display="block";
+                    document.getElementById("s6").style.display="block";
+                    document.getElementById("s7").style.display="block";
+                    document.getElementById("s8").style.display="block";
+                }       
+            }
+
+            function cgpacalc(){
+                var c=document.getElementById("cgpa1").selectedIndex;
+                if(c==1)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var f1=cg1;
+                    document.getElementById("final").innerHTML="Cumulative Grade Points Average(CGPA): " +f1+ "*";
+                }
+                else if(c==2)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var f22=parseFloat(cg1)+parseFloat(cg2);
+                    var f2=(f22/c).toFixed(2);
+                    document.getElementById("final").innerHTML="Cumulative Grade Points Average(CGPA): " +f2+ "*";
+                }
+                else if(c==3)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var f33=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3);
+                    var f3=(f33/c).toFixed(2);
+                    document.getElementById("final").innerHTML="Cumulative Grade Points Average(CGPA): " +f3+ "*";
+                }
+                else if(c==4)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var cg4=document.getElementById("s4").value;
+                    var f44=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3)+parseFloat(cg4);
+                    var f4=(f44/c).toFixed(2);
+                    document.getElementById("final").innerHTML="Cumulative Grade Points Average(CGPA): " +f4+ "*";
+                }
+                else if(c==5)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var cg4=document.getElementById("s4").value;
+                    var cg5=document.getElementById("s5").value;
+                    var f55=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3)+parseFloat(cg4)+parseFloat(cg5);
+                    var f5=(f55/c).toFixed(2);
+                    document.getElementById("final").innerHTML="Cumulative Grade Points Average(CGPA): " +f5+ "*";
+                }
+                else if(c==6)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var cg4=document.getElementById("s4").value;
+                    var cg5=document.getElementById("s5").value;
+                    var cg6=document.getElementById("s6").value;
+                    var f66=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3)+parseFloat(cg4)+parseFloat(cg5)+parseFloat(cg6);
+                    var f6=(f66/c).toFixed(2);
+                    document.getElementById("final").innerHTML="Cumulative Grade Points Average(CGPA): " +f6+ "*";
+                }
+                else if(c==7)
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var cg4=document.getElementById("s4").value;
+                    var cg5=document.getElementById("s5").value;
+                    var cg6=document.getElementById("s6").value;
+                    var cg7=document.getElementById("s7").value;
+                    var f77=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3)+parseFloat(cg4)+parseFloat(cg5)+parseFloat(cg6)+parseFloat(cg7);
+                    var f7=(f77/c).toFixed(2);
+                    document.getElementById("final").innerHTML="Cumulative Grade Points Average(CGPA): " +f7+ "*";
+                }
+                else
+                {
+                    var cg1=document.getElementById("s1").value;
+                    var cg2=document.getElementById("s2").value;
+                    var cg3=document.getElementById("s3").value;
+                    var cg4=document.getElementById("s4").value;
+                    var cg5=document.getElementById("s5").value;
+                    var cg6=document.getElementById("s6").value;
+                    var cg7=document.getElementById("s7").value;
+                    var cg8=document.getElementById("s8").value;
+                    var f88=parseFloat(cg1)+parseFloat(cg2)+parseFloat(cg3)+parseFloat(cg4)+parseFloat(cg5)+parseFloat(cg6)+parseFloat(cg7)+parseFloat(cg8);
+                    var f8=(f88/c).toFixed(2);
+                    document.getElementById("final").innerHTML="Cumulative Grade Points Average(CGPA): " +f8+ "*";
+                }
+
+            }
+
+             
     </script>
     <br><br>
 </body>
