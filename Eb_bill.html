@@ -60,7 +60,7 @@
                 <div class="col">
                     <p>
                         <div class="form-group">
-                            <select name="course" id="tariff" class="form-control" required="">
+                            <select name="course" id="tariff" class="form-control" onchange="show()" required="">
                                 <option value="">--Select the Tariff--</option>
                                 <option value="">Domestic</option>
                                 <option value="">Commercial</option>
@@ -84,16 +84,6 @@
             </div>
             <div class="row mt-3">
                 <div class="col">
-                    <h5><b>Contracted load(Not required for Domestic Tariff):-</b></h5>
-                </div>
-                <div class="col">
-                    <p>
-                        <input type="number"class=" subject-input form-control" id="credit6" placeholder=" ">
-                    </p>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col">
                     <h5><b>Consumed Units:-</b></h5>
                 </div>
                 <div class="col">
@@ -101,11 +91,22 @@
                 </div>
             </div>
             <div class="row mt-4">
-                <div class="col">
+                <div class="col" id="load" style="display: none;">
+                    <h5><b>Contracted load(Not required for Domestic Tariff):-</b></h5>
+                </div>
+                <div class="col" id="load1" style="display: none;">
+                    <p >
+                        <input type="number"class=" subject-input form-control" id="credit6" placeholder=" ">
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row mt-3">
+                <div class="col" id="kvah" style="display: none;">
                     <h5><b>KVAH(Not required for Domestic Tariff):-</b></h5>
                 </div>
-                <div class="col">
-                    <input type="number"class=" subject-input form-control" id="credit6" placeholder=" "> 
+                <div class="col" id="kvah1" style="display: none;">
+                    <input type="number"class=" subject-input form-control" id="credit7" placeholder=" "> 
                 </div>
             </div>
             <div class="row mt-3">
@@ -120,14 +121,40 @@
     <p id="bill" class="text-center mt-3"></p>
     <script>
      
+        function show()
+        {
+          var s=document.getElementById("tariff");
+          var t=s.options[s.selectedIndex];
+          if(t.text=="Commercial")
+          {
+            document.getElementById("load").style.display="block";
+            document.getElementById("load1").style.display="block";
+            document.getElementById("kvah").style.display="block";
+            document.getElementById("kvah1").style.display="block";
+            document.getElementById("bill").innerHTML="-";
+            document.getElementById("get2").value="none";
+            document.getElementById("credit6").value="none";
+            document.getElementById("credit7").value="none"
+
+          }
+          else{
+            document.getElementById("load").style.display="none";
+            document.getElementById("load1").style.display="none";
+            document.getElementById("kvah").style.display="none";
+            document.getElementById("kvah1").style.display="none";
+            document.getElementById("bill").innerHTML="-";
+            document.getElementById("get2").value="none";
+          }
+        }
+
         function calculate()
         {   
           var units = parseInt(document.getElementById("get2").value);
           var a=0;
           var s=document.getElementById("tariff");
           var t=s.options[s.selectedIndex];
-          if(t.text=="Commercial"){
-          
+          if(t.text=="Commercial")
+          {
             if (units <= 100)
             {
                a= units * 10;
