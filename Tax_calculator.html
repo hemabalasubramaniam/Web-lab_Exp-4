@@ -5,6 +5,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        h4{
+            color: rgb(55, 0, 255);
+        }
+    </style>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -69,43 +74,33 @@
                     </div>
             </div>
             <div class="row mt-5">
+                
                 <div class="col">
-                    <h5><b>House Rent Allowance(HRA):-</b></h5>
-                </div>
-                <div class="col">
-                    <h5 id="hra"><b>-</b></h5>
+                    <h5 id="hra"><b></b></h5>
                 </div>
             </div>
             <div class="row mt-4">
+                
                 <div class="col">
-                    <h5><b>Dearness allowance(DA):-</b></h5>
-                </div>
-                <div class="col">
-                    <h5 id="da"><b>-</b></h5>
+                    <h5 id="da"><b></b></h5>
                 </div>
             </div>
             <div class="row mt-4">
+                
                 <div class="col">
-                    <h5><b>Claim deduction:-</b></h5>
-                </div>
-                <div class="col">
-                    <h5 id="claim"><b>-</b></h5>
+                    <h5 id="claim"><b></b></h5>
                 </div>
             </div>
             <div class="row mt-4">
+                
                 <div class="col">
-                    <h5><b>Income after all the deductions:-</b></h5>
-                </div>
-                <div class="col">
-                    <h5 id="tax_income"><b>-</b></h5>
+                    <h5 id="tax_income"><b></b></h5>
                 </div>
             </div>
             <div class="row mt-4">
+                
                 <div class="col">
-                    <h5><b>Tax for Your Income is:-</b></h5>
-                </div>
-                <div class="col">
-                    <h5 id="tax1"><b>-</b></h5>
+                    <h5 id="tax1"><b></b></h5>
                 </div>
             </div>
             </div>
@@ -123,49 +118,49 @@
             var salary=document.getElementById("income").value;
             var other=document.getElementById("other").value;
             var hra=(0.1*salary).toFixed(2);
-            document.getElementById("hra").innerHTML="<b>Rs. " +hra+ "</b>";
+            document.getElementById("hra").innerHTML="HouseRent Allowance(HRA):-  <b>Rs." +hra+ "</b>";
             var da=(0.05*salary).toFixed(2);
-            document.getElementById("da").innerHTML="<b>Rs. " +da+ "</b>";
+            document.getElementById("da").innerHTML="Dearness allowance(DA): <b>Rs. " +da+ "</b>";
             var gross_sal=parseInt(salary)-parseInt(hra+da);
             var taxable_income=parseInt(gross_sal)+parseInt(other);
             var loan=(0.04*salary).toFixed(2);
-            document.getElementById("claim").innerHTML="<b>Rs. " +loan+ "</b>";
+            document.getElementById("claim").innerHTML="Deduction for Insurance: <b>Rs. " +loan+ "</b>";
             var net_taxable=(parseInt(taxable_income)-parseInt(loan)).toFixed(2);
-            document.getElementById("tax_income").innerHTML="<b>Rs. " +net_taxable+ "</b>";
+            document.getElementById("tax_income").innerHTML="Income after all deductions:-   <b>Rs. " +net_taxable+ "</b>";
 
             if(net_taxable <=250000)
             {
-                document.getElementById("tax1").innerHTML="<b>No tax for Income less than 2,50,000</b>";
+                document.getElementById("tax1").innerHTML="<h4><b>No tax for Income less than 2,50,000</b></h4>";
             }
             else if(net_taxable > 250000 && net_taxable <= 500000)
             {
                 var tax1=(0.05*net_taxable).toFixed(2);
-                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+                document.getElementById("tax1").innerHTML="<h4><b>Tax for Your Income is:-  <b>Rs. " +tax1+"</b></h4>";
             }
             else if(net_taxable > 500000 && net_taxable <= 750000)
             {
                 var tax1=(0.10*net_taxable).toFixed(2);
-                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+                document.getElementById("tax1").innerHTML="<h4><b>Tax for Your Income is:-  <b>Rs. " +tax1+"</b></h4>";
             }
             else if(net_taxable > 750000 && net_taxable <= 1000000)
             {
                 var tax1=(0.15*net_taxable).toFixed(2);
-                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+                document.getElementById("tax1").innerHTML="<h4><b>Tax for Your Income is:-  <b>Rs. " +tax1+"</b></h4>";
             }
             else if(net_taxable > 1000000 && net_taxable <= 1250000)
             {
                 var tax1=(0.20*net_taxable).toFixed(2);
-                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+                document.getElementById("tax1").innerHTML="<h4><b>Tax for Your Income is:-  <b>Rs. " +tax1+"</b></h4>";
             }
             else if(net_taxable > 1250000 && net_taxable <= 1500000)
             {
                 var tax1=(0.25*net_taxable).toFixed(2);
-                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+                document.getElementById("tax1").innerHTML="<h4><b>Tax for Your Income is:-  <b>Rs. " +tax1+"</b></h4>";
             }
             else
             {
                 var tax1=(0.30*net_taxable).toFixed(2);
-                document.getElementById("tax1").innerHTML="<b>Rs. " +tax1+"</b>";
+                document.getElementById("tax1").innerHTML="<h4><b>Tax for Your Income is:-  <b>Rs. " +tax1+"</b></h4>";
             }
         }
 
